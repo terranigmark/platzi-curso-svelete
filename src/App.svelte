@@ -1,8 +1,17 @@
 <script>
   import About from "./components/About.svelte"
-	export let name;
+  import Text from "./components/Text.svelte"
+  import Person from "./components/Person.svelte"
+
+  export let name;
   export let lastName;
   let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
+
+  const data = {
+    name: "Hector",
+    lastName: "Vega",
+    age: 30
+  }
 </script>
 
 <style>
@@ -44,5 +53,8 @@
 <main>
 	<h1>Hello {name} {lastName}!</h1>
   <About />
+  <Text anotherText="Hola!"/>
+  <Text />
+  <Person {...data}/>
   <img src={svelteLogo} alt="Svelte Logo">
 </main>
