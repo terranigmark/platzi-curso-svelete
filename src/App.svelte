@@ -25,6 +25,16 @@
 		--theme-color: purple;
 	}
 
+	:global(body.dark-mode) {
+		background-color: #1d3040;
+		color: #bfc2c7;
+		--theme-color: #df80ff;
+	}
+
+	:global(body.dark-mode) h1 {
+		color: #ff8566
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
