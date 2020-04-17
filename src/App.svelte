@@ -1,15 +1,35 @@
 <script>
 	export let name;
-	export let lastName;
+  export let lastName;
+  let svelteLogo = "https://arepa.s3.amazonaws.com/svelte-logo.png";
 </script>
 
 <style>
+
+	:global(body) {
+		background-color: #f2eee2;
+		color: #0084f6;
+	}
+
+	:global(:root) {
+		--theme-color: purple;
+	}
+
+	p {
+		color: var(--theme-color);
+    font-size: 22px;
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
 	}
+
+  main img {
+    width: 30%;
+  }
 
 	h1 {
 		color: #ff3e00;
@@ -27,4 +47,6 @@
 
 <main>
 	<h1>Hello {name} {lastName}!</h1>
+	<p>Automation Tester</p>
+  <img src={svelteLogo} alt="Svelte Logo">
 </main>
